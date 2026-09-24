@@ -35,10 +35,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative bg-[#07111f] overflow-x-hidden">
+    <div className="relative bg-[#0a0a0a] overflow-x-hidden">
       {/* Enhanced scroll progress bar */}
       <div
-        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyan-400 via-cyan-500 to-amber-400 z-50 transition-all duration-300 shadow-glow-cyan"
+        className="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-blue-600 z-50 transition-all duration-300 shadow-glow-blue"
         style={{ width: `${scrollProgress}%` }}
       />
 
@@ -48,8 +48,8 @@ export default function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(34, 211, 238, 0.10) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(34, 211, 238, 0.10) 1px, transparent 1px)
+              linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
           }}

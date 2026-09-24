@@ -30,4 +30,7 @@ export type SocialLink = {
   platform: string;
   url: string;
   order_index: number;
+  is_active?: boolean;
+  whatsapp_message?: string | null;
+  button_label?: string | null;
 };

@@ -36,9 +36,12 @@ create policy "Authenticated users can manage team members"
 create table if not exists social_links (
   id          uuid primary key default gen_random_uuid(),
   platform    text not null,
-  url         text not null,
-  order_index integer not null default 0,
-  created_at  timestamptz not null default now()
+  url               text not null,
+  order_index       integer not null default 0,
+  is_active         boolean not null default true,
+  whatsapp_message  text,
+  button_label      text default 'Let''s Talk',
+  created_at        timestamptz not null default now()
 );
 
 alter table social_links enable row level security;

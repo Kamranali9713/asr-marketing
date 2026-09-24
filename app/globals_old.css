@@ -52,9 +52,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply text-foreground;
-    background: #07111f;
-    color: #f8fafc;
+    @apply bg-[#0a0a0a] text-foreground;
   }
 }
 
@@ -290,48 +288,5 @@ body {
   .animate-gradient,
   .animate-shimmer {
     animation: none !important;
-  }
-}
-
-/* ASR premium navy + cyan + amber visual refresh */
-:root {
-  --asr-navy: #07111f;
-  --asr-navy-2: #0b1729;
-  --asr-cyan: #22d3ee;
-  --asr-amber: #f59e0b;
-}
-
-body {
-  background:
-    radial-gradient(circle at 10% 0%, rgba(34, 211, 238, 0.07), transparent 28%),
-    radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.045), transparent 24%),
-    var(--asr-navy);
-}
-
-.premium-card,
-.glass {
-  border-color: rgba(148, 163, 184, 0.14);
-}
-
-.premium-card:hover {
-  border-color: rgba(34, 211, 238, 0.35);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35), 0 0 50px rgba(34, 211, 238, 0.08);
-}
-
-.text-gradient-blue {
-  background: linear-gradient(135deg, #67e8f9 0%, #22d3ee 45%, #fbbf24 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-::selection {
-  background: rgba(34, 211, 238, 0.25);
-  color: white;
-}
-
-@media (max-width: 640px) {
-  .glass {
-    backdrop-filter: blur(14px);
   }
 }
