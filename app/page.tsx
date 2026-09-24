@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
@@ -13,6 +14,7 @@ import { CEOSection } from "@/components/sections/CeoSection";
 import {PlansSection} from "@/components/sections/PlansSection";
 import { VideoCarouselSection } from "@/components/sections/VideoCarouselSection";
 import { handleScrollOnLoad } from "@/lib/utils/navigation";
+
 
 export default function Home() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -62,6 +64,7 @@ export default function Home() {
         <ServicesSection />
         <AboutSection />
         <CEOSection />
+        <TeamSection />
         <ProjectsSection />
         <TestimonialsSection />
         {/* <PlansSection/> */}

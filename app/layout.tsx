@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import SmoothScroll from "@/components/layout/SmoothScroll";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,13 @@ export const metadata: Metadata = {
     "We craft innovative digital experiences that elevate your business to new heights with cutting-edge technology and creative excellence.",
   icons: {
     icon: "/logoasr.webp",
+  },
+  openGraph: {
+    title: "ASR Marketing - Your Social Assistance",
+    description:
+      "We craft innovative digital experiences that elevate your business to new heights with cutting-edge technology and creative excellence.",
+    images: ["/logoasr.webp"],
+    type: "website",
   },
 };
 
@@ -22,10 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logoasr.png" type="image/png" />
+        <link rel="icon" href="/logoasr.webp" type="image/webp" />
       </head>
       <body className={inter.className}>
         <SmoothScroll>{children}</SmoothScroll>
+        <WhatsAppButton />
       </body>
     </html>
   );

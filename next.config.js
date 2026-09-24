@@ -18,6 +18,12 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'source.unsplash.com',
       },
+      {
+        // Allows team photo URLs added from the admin panel (Supabase
+        // Storage, or any other external image host) to render.
+        protocol: 'https',
+        hostname: '**',
+      },
     ],
   },
 };
