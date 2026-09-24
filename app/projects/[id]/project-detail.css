@@ -1,0 +1,55 @@
+/* Project Detail Page Styles */
+.project-detail-header {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-detail-image {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.project-feature-card {
+  transition: all 0.3s ease;
+}
+
+.project-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.technology-tag {
+  transition: all 0.2s ease;
+}
+
+.technology-tag:hover {
+  transform: scale(1.05);
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.gallery-image {
+  transition: all 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
+.back-link {
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-5px);
+}
+
+.visit-website-button {
+  transition: all 0.3s ease;
+}
+
+.visit-website-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+}
