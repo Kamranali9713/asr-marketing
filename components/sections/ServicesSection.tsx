@@ -21,7 +21,8 @@ const services = [
       "Custom websites and web applications built with modern technologies",
     color: "from-blue-500 to-blue-600",
     index: "01",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
   },
   {
     slug: "app-development",
@@ -31,7 +32,8 @@ const services = [
       "Native and cross-platform mobile applications for iOS and Android",
     color: "from-blue-400 to-blue-500",
     index: "02",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop",
   },
   {
     slug: "ecommerce",
@@ -40,7 +42,8 @@ const services = [
     description: "Complete online store solutions with payment integration",
     color: "from-blue-600 to-blue-700",
     index: "03",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
   },
   {
     slug: "graphic-designing",
@@ -50,7 +53,8 @@ const services = [
       "Creative design solutions for branding and marketing materials",
     color: "from-blue-300 to-blue-400",
     index: "04",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop",
   },
   {
     slug: "digital-marketing",
@@ -60,7 +64,8 @@ const services = [
       "Comprehensive digital marketing strategies to grow your business",
     color: "from-blue-700 to-blue-800",
     index: "05",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
   },
   {
     slug: "ai-solutions",
@@ -70,7 +75,8 @@ const services = [
       "Artificial intelligence solutions to automate and optimize processes",
     color: "from-blue-800 to-blue-900",
     index: "06",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
   },
 ];
 
@@ -78,23 +84,27 @@ export function ServicesSection() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="services" className="relative py-32 bg-gradient-to-b from-[#030617] via-[#050a15] to-[#030617] text-white">
+    <section
+      id="services"
+      className="relative py-32 bg-gradient-to-b from-[#030617] via-[#050a15] to-[#030617] text-white"
+    >
       {/* Background elements with pointer-events-none to allow scrolling */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-950/20 to-black pointer-events-none" />
-      
+
       {/* Enhanced animated gradient orbs */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-blue-600/25 rounded-full blur-[140px] animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[500px] h-[500px] bg-blue-800/25 rounded-full blur-[140px] animate-pulse delay-700 pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-cyan-500/15 rounded-full blur-[120px] animate-pulse delay-1000 pointer-events-none" />
-      
+
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `
             linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px),
             linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
           `,
-          backgroundSize: '80px 80px'
+          backgroundSize: "80px 80px",
         }}
       />
 
@@ -110,7 +120,10 @@ export function ServicesSection() {
           </span>
         </h2>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto text-center leading-relaxed px-4">
-          <span className="text-gradient-blue font-medium">Comprehensive IT solutions</span> tailored to drive your business forward.
+          <span className="text-gradient-blue font-medium">
+            Comprehensive IT solutions
+          </span>{" "}
+          tailored to drive your business forward.
         </p>
       </div>
 
@@ -120,12 +133,21 @@ export function ServicesSection() {
           {services.map((service, index) => {
             const isActive = active === index;
             return (
-              <Link
-                href={`/services/${service.slug}`}
+              // <Link
+              //   href={`/services/${service.slug}`}
+              //   key={index}
+              //   onMouseEnter={() => setActive(index)}
+              //   onMouseLeave={() => setActive(null)}
+              //   className={`group relative flex-shrink-0 w-72 h-[300px] rounded-3xl transition-all duration-500 cursor-pointer snap-start
+              //     ${isActive ? "scale-105 z-20" : "scale-95 opacity-80 z-10"}
+              //   `}
+              // >
+              <div
+                // href={`/services/${service.slug}`}
                 key={index}
-                onMouseEnter={() => setActive(index)}
-                onMouseLeave={() => setActive(null)}
-                className={`group relative flex-shrink-0 w-72 h-[420px] rounded-3xl transition-all duration-500 cursor-pointer snap-start
+                // onMouseEnter={() => setActive(index)}
+                // onMouseLeave={() => setActive(null)}
+                className={`group relative flex-shrink-0 w-72 h-[300px] rounded-3xl transition-all duration-500 snap-start
                   ${isActive ? "scale-105 z-20" : "scale-95 opacity-80 z-10"}
                 `}
               >
@@ -138,72 +160,73 @@ export function ServicesSection() {
                   }
                 `}
                 />
-              <div
-                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
-              />
-              
-              {/* Background Image */}
-              <div className="absolute inset-0 rounded-3xl overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                <div
+                  className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0a1020] via-[#0a1020]/80 to-[#050a15]" />
-              </div>
 
-              <div className="relative z-10 flex flex-col justify-between h-full p-8 text-center">
-                <div className="flex flex-col items-center space-y-4">
-                  {/* Icon with image background */}
-                  <div className="relative">
-                    <div
-                      className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${
-                        service.color
-                      } flex items-center justify-center transform transition-all duration-500 
+                {/* Background Image */}
+                <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-b from-[#0a1020] via-[#0a1020]/80 to-[#050a15]" />
+                </div>
+
+                <div className="relative z-10 flex flex-col justify-between h-full p-8 text-center">
+                  <div className="flex flex-col items-center space-y-4">
+                    {/* Icon with image background */}
+                    <div className="relative">
+                      <div
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${
+                          service.color
+                        } flex items-center justify-center transform transition-all duration-500 
                       ${isActive ? "scale-110 rotate-6 shadow-lg" : ""}
                       shadow-glow-blue
                     `}
-                    >
-                      <service.icon className="w-10 h-10 text-white" />
+                      >
+                        <service.icon className="w-10 h-10 text-white" />
+                      </div>
+                      {/* Small image preview */}
+                      <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-glow-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <Image
+                          src={service.image}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                    {/* Small image preview */}
-                    <div className="absolute -bottom-2 -right-2 w-16 h-16 rounded-lg overflow-hidden border-2 border-blue-500/50 shadow-glow-blue opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  
-                  <h3
-                    className={`text-2xl font-bold transition-all duration-300 ${
-                      isActive
-                        ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
-                        : "text-white"
-                    }`}
-                  >
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
 
-                <div className="flex flex-col items-center">
-                  <div
-                    className={`w-full h-[2px] bg-gradient-to-r from-blue-500 to-blue-600 transform transition-transform duration-500 origin-left
+                    <h3
+                      className={`text-2xl font-bold transition-all duration-300 ${
+                        isActive
+                          ? "text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600"
+                          : "text-white"
+                      }`}
+                    >
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-center">
+                    <div
+                      className={`w-full h-[2px] bg-gradient-to-r from-blue-500 to-blue-600 transform transition-transform duration-500 origin-left
                     ${isActive ? "scale-x-100" : "scale-x-0"}
                   `}
-                  />
-                  <span className="mt-3 text-blue-400 text-sm font-semibold tracking-widest">
-                    {service.index}
-                  </span>
+                    />
+                    <span className="mt-3 text-blue-400 text-sm font-semibold tracking-widest">
+                      {service.index}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              </Link>
+                </div>
+              // </Link>
             );
           })}
         </div>
@@ -213,12 +236,11 @@ export function ServicesSection() {
           {services.map((service, index) => {
             const isActive = active === index;
             return (
-              <Link
-                href={`/services/${service.slug}`}
+              <div
                 key={index}
                 onMouseEnter={() => setActive(index)}
                 onMouseLeave={() => setActive(null)}
-                className={`group relative w-72 h-[420px] rounded-3xl transition-all duration-500 cursor-pointer 
+                              className={`group relative w-72 h-[300px] rounded-3xl transition-all duration-500
                   ${isActive ? "scale-105 z-20" : "scale-95 opacity-80 z-10"}
                 `}
               >
@@ -234,7 +256,7 @@ export function ServicesSection() {
                 <div
                   className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 />
-                
+
                 {/* Background Image */}
                 <div className="absolute inset-0 rounded-3xl overflow-hidden">
                   <Image
@@ -246,7 +268,8 @@ export function ServicesSection() {
                   <div className="absolute inset-0 bg-gradient-to-b from-[#0a1020] via-[#0a1020]/80 to-[#050a15]" />
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-between h-full p-8 text-center">
+                {/* <div className="relative z-10 flex flex-col justify-between h-full p-8 text-center"> */}
+                <div className="relative z-10 flex flex-col h-full p-8 text-center">
                   <div className="flex flex-col items-center space-y-4">
                     {/* Icon with image background */}
                     <div className="relative">
@@ -270,7 +293,7 @@ export function ServicesSection() {
                         />
                       </div>
                     </div>
-                    
+
                     <h3
                       className={`text-2xl font-bold transition-all duration-300 ${
                         isActive
@@ -285,7 +308,7 @@ export function ServicesSection() {
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-center">
+                  {/* <div className="flex flex-col items-center">
                     <div
                       className={`w-full h-[2px] bg-gradient-to-r from-blue-500 to-blue-600 transform transition-transform duration-500 origin-left
                       ${isActive ? "scale-x-100" : "scale-x-0"}
@@ -294,9 +317,20 @@ export function ServicesSection() {
                     <span className="mt-3 text-blue-400 text-sm font-semibold tracking-widest">
                       {service.index}
                     </span>
+                  </div> */}
+                  <div className="flex flex-col items-center mt-4">
+                    <div
+                      className={`w-full h-[2px] bg-gradient-to-r from-blue-500 to-blue-600 transform transition-transform duration-500 origin-left
+                        ${isActive ? "scale-x-100" : "scale-x-0"}
+                      `}
+                    />
+                    <span className="mt-1 text-blue-400 text-sm font-semibold tracking-widest">
+                      {service.index}
+                    </span>
                   </div>
                 </div>
-              </Link>
+                {/* </Link> */}
+              </div>
             );
           })}
         </div>

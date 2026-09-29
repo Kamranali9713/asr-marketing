@@ -67,7 +67,7 @@ export function CEOSection() {
           {/* Enhanced CEO Image */}
           <div className="relative z-10 w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full overflow-hidden flex-shrink-0 shadow-glow-blue-lg group/image">
             <Image
-              src="/abdullah.webp"
+              src="/abdullah.jpeg"
               alt="CEO"
               fill
               className="object-cover rounded-full border-4 border-blue-600/60 group-hover/image:scale-110 transition-transform duration-500"

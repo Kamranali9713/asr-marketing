@@ -206,7 +206,7 @@ const NAV_ITEMS = [
   { label: "Home", sectionId: "home" },
   { label: "Services", sectionId: "services" },
   { label: "About", sectionId: "about" },
-  { label: "Team", sectionId: "team" },
+  // { label: "Team", sectionId: "team" },
   { label: "Projects", sectionId: "projects" },
   { label: "Testimonials", sectionId: "testimonials" },
   { label: "Contact", sectionId: "contact" },
@@ -629,7 +629,7 @@ export function Header() {
                   text-transparent
                 "
               >
-                Asr Marketing
+                ASR Marketing
               </span>
 
               <span
